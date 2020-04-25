@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "graphene_django",
     "rest_framework",
     "django_celery_beat",
     "channels",
@@ -258,3 +259,6 @@ REST_FRAMEWORK = {
 
 
 ASGI_APPLICATION = "zeus.routing.application"
+
+GRAPHENE = {"SCHEMA": "zeus.schema.schema"}
+

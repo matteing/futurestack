@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from graphene_django.views import GraphQLView
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -25,4 +26,5 @@ urlpatterns = [
     path("paddle/", include("djpaddle.urls", namespace="djpaddle")),
     path("billing/", include("billing.urls")),
     path("api-auth/", include("rest_framework.urls")),
+    path("graphql", GraphQLView.as_view(graphiql=True)),
 ]
