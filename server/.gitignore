@@ -17,7 +17,6 @@ media
 .vscode/
 .DS_Store
 .env
-Pipfile
 static/
 compiled_assets
 compiled_assets/*
@@ -28,7 +27,6 @@ celerybeat*
 htmlcov/*
 static/*
 .anaconda
-Pipfile.lock
 dump.rdb
 
 # End of https://www.gitignore.io/api/django

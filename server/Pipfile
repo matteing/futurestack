@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django-environ = "*"
+django-anymail = {extras = ["mailgun", "mailjet", "sendgrid", "sparkpost"],version = "*"}
+collectfast = "*"
+django-storages = "*"
+django-extensions = "*"
+dj-paddle = {git = "https://github.com/matteing/dj-paddle.git",ref = "914a7337cb598ed2602e4ac5ed473e36539bf8eb"}
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+django-cors-headers = "*"
+pillow = "*"
+boto3 = "*"
+django-ipware = "*"
+channels = "*"
+django-celery-beat = "*"
+graphene-django = ">=2.0"
+
+[requires]
+python_version = "3.8"
