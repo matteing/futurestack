@@ -1,0 +1,65 @@
+@import url("https://rsms.me/inter/inter.css");
+
+@import "tailwindcss/base";
+
+html {
+  @apply font-sans text-gray-900 antialiased leading-tight;
+}
+
+body {
+  @apply min-h-screen bg-white;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+a {
+  @apply underline cursor-pointer !important;
+}
+
+nav .logo svg {
+  /* Needs CSS */
+  height: 30px;
+  @apply fill-current;
+}
+
+footer .logo svg {
+  /* Needs CSS */
+  height: 30px;
+  width: 100px;
+  @apply fill-current;
+}
+
+footer .logo-icon svg {
+  /* Needs CSS */
+  height: 30px;
+  width: 30px;
+  @apply fill-current;
+}
+
+footer svg path {
+  @apply stroke-current fill-current !important;
+}
+
+.logo-text.lg svg {
+  width: 150px;
+  height: 40px;
+  @apply fill-current;
+}
+
+.logo-text.text-fill svg path {
+  @apply stroke-current fill-current !important;
+}
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
