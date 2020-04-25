@@ -1,0 +1,5 @@
+Welcome to {{  app_name }}, let's get set up:
+
+Below is your confirmation link, click on it to begin:
+
+{{ confirm_url }}

@@ -2,7 +2,7 @@ import React from "react";
 import NProgress from "nprogress";
 import Router from "next/router";
 
-class NProgressContainer extends React.Component {
+export class NProgressContainer extends React.Component {
   static defaultProps = {
     color: "#47e0a0",
     showAfterMs: 300,

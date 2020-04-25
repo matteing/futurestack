@@ -1,0 +1,143 @@
+{% extends 'makerlog/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+<style>
+.accounts-hero {
+	/*background-image: url('https://images.unsplash.com/photo-1484589065579-248aad0d8b13?auto=format&fit=crop&w=996&q=80');
+	*/
+	background: url('https://images.unsplash.com/photo-1490042070366-0ffc8c5df5fe?auto=format&fit=crop&w=1651&q=80');
+
+	background-position: center;
+	background-size: cover;
+}
+.accounts-hero input {
+	background-color: transparent;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	height: 3rem;
+	font-size: 1rem;
+	outline: none;
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+.accounts-hero button {
+	background-color: transparent;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	height: 3rem;
+	margin-top: 10px;
+	font-size: 1rem;
+}
+
+.accounts-hero .left-column {
+	height: 100%;
+}
+
+
+.quote-case {
+	padding: 30px;
+	display: flex;
+  height: 100%
+}
+
+.quote-case .quote {
+	display: inline-block;
+}
+
+.quote-case .quote .begin {
+  	align-self: flex-start;
+}
+
+.quote-case .quote .end {
+  	align-self: flex-end;
+}
+
+
+.image-case {
+	width: auto;
+	height: 500px;
+
+}
+
+.logotype {
+    font-family: 'Hammersmith One', sans-serif;
+    color: #47E0A0 !important;
+}
+
+.no-margin  {
+	margin: 0;
+}
+
+.column {
+	height: 100vh;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 50px;
+}
+
+.navbar {
+	background: transparent !important;
+}
+
+.tint {
+	background: rgba(0, 0, 0, 0.5) !important
+}
+
+html {
+	margin-top: 0px !important;
+}
+
+.content-column {
+	background-color: #000a12;
+}
+
+.column  h1 {
+	color: white !important;
+}
+</style>
+
+
+<div class="columns is-fullheight accounts-hero">
+	<div class="column content-column is-two-fifths">
+		<h1 class="title is-2">Sign in</h1>
+  		{% if form.errors %}
+  		<article class="message">
+			  <div class="message-body">    
+			  		<strong>Sorry, we couldn't do that:</strong>
+				    {% for field in form %}
+				        {% for error in field.errors %}
+							   <p>{{ error|escape }}</p>
+				        {% endfor %}
+				    {% endfor %}
+				    {% for error in form.non_field_errors %}
+				     	<p>{{ error|escape }}</p>
+				    {% endfor %}
+			  </div>
+		</article>
+		{% endif %}
+	  	<form method="POST">
+			{% csrf_token %}
+	   		<input name="id_username" placeholder="Username" />
+	  		<br />
+	  		<input nane="id_password" type="password" placeholder="Password" /><br />
+		 	<center><button type="submit" class="is-brand-green">Login &raquo;</button></center>
+		</form>
+	</div>
+	<div class="column tint">
+		<div class="quote">
+			<h1 class="title is-2 no-margin begin">
+				"The only way to do great work is to love what you do."
+			</h1>
+			<h1 class="title is-4 end">Steve Jobs</h1>
+		</div>
+	</div>
+</div>
+{% endblock %}
