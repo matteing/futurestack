@@ -26,5 +26,6 @@ urlpatterns = [
     path("paddle/", include("djpaddle.urls", namespace="djpaddle")),
     path("billing/", include("billing.urls")),
     path("api-auth/", include("rest_framework.urls")),
+    path('admin/', admin.site.urls),
     path("graphql", GraphQLView.as_view(graphiql=True)),
 ]
